@@ -1,5 +1,7 @@
-import { Link, Route, Routes } from "react-router-dom"
+import {Route, Routes } from "react-router-dom"
 import LoginPage from "./pages/LoginPage"
+import ProductPage from "./pages/ProductPage"
+import ProductDetail from "./pages/ProductDetail"
 
 
 
@@ -7,22 +9,11 @@ function App() {
 
   return (
     <div>
-      {/* <nav>
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/about">About</Link>
-          </li>
-          <li>
-            <Link to="/contact">Contact</Link>
-          </li>
-        </ul>
-      </nav> */}
       <Routes>
-        <Route path="/login" element={<LoginPage />} />
-      
+        <Route path="/" element={<LoginPage />} />
+         <Route path="/products" element={<ProductPage/>}/>
+         <Route path="/productDetails/:productId" element={<ProductDetail/>}/>
+
       </Routes>
     </div>
   )

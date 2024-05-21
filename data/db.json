@@ -1,60 +1,4 @@
 {
-  "brands": [
-    {
-      "_id": "3e12e190-aec1-11ee-8d72-0986a9297550",
-      "name": "Fendi",
-      "image": {
-        "url": "http://res.cloudinary.com/de5w8iqms/image/upload/v1704785548/frontend-api/brands/3d8cc1a0-aec1-11ee-8d72-0986a9297550.png",
-        "public_id": "frontend-api/brands/3d8cc1a0-aec1-11ee-8d72-0986a9297550"
-      },
-      "id": "b440"
-    },
-    {
-      "_id": "49e83560-aec1-11ee-8d72-0986a9297550",
-      "name": "Chanel",
-      "image": {
-        "url": "http://res.cloudinary.com/de5w8iqms/image/upload/v1704785568/frontend-api/brands/496f5be0-aec1-11ee-8d72-0986a9297550.png",
-        "public_id": "frontend-api/brands/496f5be0-aec1-11ee-8d72-0986a9297550"
-      },
-      "id": "a36d"
-    },
-    {
-      "_id": "569dfe20-aec1-11ee-8d72-0986a9297550",
-      "name": "Versace",
-      "image": {
-        "url": "http://res.cloudinary.com/de5w8iqms/image/upload/v1704785589/frontend-api/brands/56180540-aec1-11ee-8d72-0986a9297550.jpg",
-        "public_id": "frontend-api/brands/56180540-aec1-11ee-8d72-0986a9297550"
-      },
-      "id": "1c5d"
-    },
-    {
-      "_id": "6102aaf0-aec1-11ee-8d72-0986a9297550",
-      "name": "Levis",
-      "image": {
-        "url": "http://res.cloudinary.com/de5w8iqms/image/upload/v1704785606/frontend-api/brands/6087fcb0-aec1-11ee-8d72-0986a9297550.webp",
-        "public_id": "frontend-api/brands/6087fcb0-aec1-11ee-8d72-0986a9297550"
-      },
-      "id": "701e"
-    },
-    {
-      "_id": "5824ae90-b9cc-11ee-ad9c-81dc71d38774",
-      "name": "Adidas",
-      "image": {
-        "url": "http://res.cloudinary.com/de5w8iqms/image/upload/v1705999779/frontend-api/brands/57ac9860-b9cc-11ee-ad9c-81dc71d38774.png",
-        "public_id": "frontend-api/brands/57ac9860-b9cc-11ee-ad9c-81dc71d38774"
-      },
-      "id": "2d84"
-    },
-    {
-      "_id": "0cc7b790-e43c-11ee-8682-a528b2933c1e",
-      "name": "React222",
-      "image": {
-        "url": "http://res.cloudinary.com/de5w8iqms/image/upload/v1710665705/frontend-api/brands/0c2b0260-e43c-11ee-8682-a528b2933c1e.png",
-        "public_id": "frontend-api/brands/0c2b0260-e43c-11ee-8682-a528b2933c1e"
-      },
-      "id": "a4e1"
-    }
-  ],
   "products": [
     {
       "_id": "d2f53660-aec5-11ee-b4f8-930f3b836431",
@@ -64,24 +8,12 @@
       "salePrice": 200,
       "brandId": "569dfe20-aec1-11ee-8d72-0986a9297550",
       "isPublish": false,
-      "images": [
+      "images": 
         {
           "url": "http://res.cloudinary.com/de5w8iqms/image/upload/v1704787515/frontend-api/products/d22d7990-aec5-11ee-b4f8-930f3b836431.webp",
           "public_id": "frontend-api/products/d22d7990-aec5-11ee-b4f8-930f3b836431"
-        },
-        {
-          "url": "http://res.cloudinary.com/de5w8iqms/image/upload/v1704787515/frontend-api/products/d22dc7b0-aec5-11ee-b4f8-930f3b836431.webp",
-          "public_id": "frontend-api/products/d22dc7b0-aec5-11ee-b4f8-930f3b836431"
-        },
-        {
-          "url": "http://res.cloudinary.com/de5w8iqms/image/upload/v1704787515/frontend-api/products/d22e15d0-aec5-11ee-b4f8-930f3b836431.webp",
-          "public_id": "frontend-api/products/d22e15d0-aec5-11ee-b4f8-930f3b836431"
-        },
-        {
-          "url": "http://res.cloudinary.com/de5w8iqms/image/upload/v1704787515/frontend-api/products/d22e3ce0-aec5-11ee-b4f8-930f3b836431.webp",
-          "public_id": "frontend-api/products/d22e3ce0-aec5-11ee-b4f8-930f3b836431"
-        }
-      ],
+        } 
+      ,
       "id": "4a19"
     },
     {
@@ -91,24 +23,12 @@
       "productPrice": 350,
       "brandId": "569dfe20-aec1-11ee-8d72-0986a9297550",
       "isPublish": true,
-      "images": [
+      "images": 
         {
           "url": "http://res.cloudinary.com/de5w8iqms/image/upload/v1704787734/frontend-api/products/545e5510-aec6-11ee-b4f8-930f3b836431.webp",
           "public_id": "frontend-api/products/545e5510-aec6-11ee-b4f8-930f3b836431"
-        },
-        {
-          "url": "http://res.cloudinary.com/de5w8iqms/image/upload/v1704787734/frontend-api/products/545ea330-aec6-11ee-b4f8-930f3b836431.webp",
-          "public_id": "frontend-api/products/545ea330-aec6-11ee-b4f8-930f3b836431"
-        },
-        {
-          "url": "http://res.cloudinary.com/de5w8iqms/image/upload/v1704787734/frontend-api/products/545ef150-aec6-11ee-b4f8-930f3b836431.webp",
-          "public_id": "frontend-api/products/545ef150-aec6-11ee-b4f8-930f3b836431"
-        },
-        {
-          "url": "http://res.cloudinary.com/de5w8iqms/image/upload/v1704787734/frontend-api/products/545f1860-aec6-11ee-b4f8-930f3b836431.webp",
-          "public_id": "frontend-api/products/545f1860-aec6-11ee-b4f8-930f3b836431"
         }
-      ],
+      ,
       "salePrice": 300,
       "id": "4905"
     },
@@ -119,24 +39,12 @@
       "productPrice": 75,
       "brandId": "6102aaf0-aec1-11ee-8d72-0986a9297550",
       "isPublish": true,
-      "images": [
+      "images": 
         {
           "public_id": "frontend-api/products/3c09d820-c1ba-11ee-8094-0f80285d9740",
           "url": "http://res.cloudinary.com/de5w8iqms/image/upload/v1706871611/frontend-api/products/3c09d820-c1ba-11ee-8094-0f80285d9740.webp"
-        },
-        {
-          "public_id": "frontend-api/products/3c0a2640-c1ba-11ee-8094-0f80285d9740",
-          "url": "http://res.cloudinary.com/de5w8iqms/image/upload/v1706871611/frontend-api/products/3c0a2640-c1ba-11ee-8094-0f80285d9740.webp"
-        },
-        {
-          "url": "http://res.cloudinary.com/de5w8iqms/image/upload/v1704787797/frontend-api/products/7a5eb9d0-aec6-11ee-b4f8-930f3b836431.webp",
-          "public_id": "frontend-api/products/7a5eb9d0-aec6-11ee-b4f8-930f3b836431"
-        },
-        {
-          "url": "http://res.cloudinary.com/de5w8iqms/image/upload/v1704787797/frontend-api/products/7a5f07f0-aec6-11ee-b4f8-930f3b836431.webp",
-          "public_id": "frontend-api/products/7a5f07f0-aec6-11ee-b4f8-930f3b836431"
         }
-      ],
+      ,
       "salePrice": null,
       "id": "78bd"
     },
@@ -148,24 +56,12 @@
       "salePrice": 200,
       "brandId": "49e83560-aec1-11ee-8d72-0986a9297550",
       "isPublish": true,
-      "images": [
+      "images": 
         {
           "url": "http://res.cloudinary.com/de5w8iqms/image/upload/v1704787955/frontend-api/products/d835dbb0-aec6-11ee-b4f8-930f3b836431.webp",
           "public_id": "frontend-api/products/d835dbb0-aec6-11ee-b4f8-930f3b836431"
-        },
-        {
-          "url": "http://res.cloudinary.com/de5w8iqms/image/upload/v1704787955/frontend-api/products/d83677f0-aec6-11ee-b4f8-930f3b836431.webp",
-          "public_id": "frontend-api/products/d83677f0-aec6-11ee-b4f8-930f3b836431"
-        },
-        {
-          "url": "http://res.cloudinary.com/de5w8iqms/image/upload/v1704787955/frontend-api/products/d836ed20-aec6-11ee-b4f8-930f3b836431.webp",
-          "public_id": "frontend-api/products/d836ed20-aec6-11ee-b4f8-930f3b836431"
-        },
-        {
-          "url": "http://res.cloudinary.com/de5w8iqms/image/upload/v1704787955/frontend-api/products/d8373b40-aec6-11ee-b4f8-930f3b836431.webp",
-          "public_id": "frontend-api/products/d8373b40-aec6-11ee-b4f8-930f3b836431"
         }
-      ],
+      ,
       "id": "9b5c"
     },
     {
@@ -176,24 +72,12 @@
       "salePrice": null,
       "brandId": "6102aaf0-aec1-11ee-8d72-0986a9297550",
       "isPublish": true,
-      "images": [
+      "images": 
         {
           "url": "http://res.cloudinary.com/de5w8iqms/image/upload/v1704788401/frontend-api/products/e1fd1a90-aec7-11ee-b4f8-930f3b836431.webp",
           "public_id": "frontend-api/products/e1fd1a90-aec7-11ee-b4f8-930f3b836431"
-        },
-        {
-          "url": "http://res.cloudinary.com/de5w8iqms/image/upload/v1704788401/frontend-api/products/e1fd68b0-aec7-11ee-b4f8-930f3b836431.webp",
-          "public_id": "frontend-api/products/e1fd68b0-aec7-11ee-b4f8-930f3b836431"
-        },
-        {
-          "url": "http://res.cloudinary.com/de5w8iqms/image/upload/v1704788401/frontend-api/products/e1fd8fc0-aec7-11ee-b4f8-930f3b836431.webp",
-          "public_id": "frontend-api/products/e1fd8fc0-aec7-11ee-b4f8-930f3b836431"
-        },
-        {
-          "url": "http://res.cloudinary.com/de5w8iqms/image/upload/v1704788401/frontend-api/products/e1fddde0-aec7-11ee-b4f8-930f3b836431.webp",
-          "public_id": "frontend-api/products/e1fddde0-aec7-11ee-b4f8-930f3b836431"
         }
-      ],
+      ,
       "id": "7d01"
     },
     {
@@ -204,24 +88,12 @@
       "salePrice": 300,
       "brandId": "3e12e190-aec1-11ee-8d72-0986a9297550",
       "isPublish": false,
-      "images": [
+      "images": 
         {
           "url": "http://res.cloudinary.com/de5w8iqms/image/upload/v1704804255/frontend-api/products/cbda99c0-aeec-11ee-bb4c-fb12f87154c3.webp",
           "public_id": "frontend-api/products/cbda99c0-aeec-11ee-bb4c-fb12f87154c3"
-        },
-        {
-          "url": "http://res.cloudinary.com/de5w8iqms/image/upload/v1704804255/frontend-api/products/cbdc2060-aeec-11ee-bb4c-fb12f87154c3.webp",
-          "public_id": "frontend-api/products/cbdc2060-aeec-11ee-bb4c-fb12f87154c3"
-        },
-        {
-          "url": "http://res.cloudinary.com/de5w8iqms/image/upload/v1704804255/frontend-api/products/cbde4340-aeec-11ee-bb4c-fb12f87154c3.webp",
-          "public_id": "frontend-api/products/cbde4340-aeec-11ee-bb4c-fb12f87154c3"
-        },
-        {
-          "url": "http://res.cloudinary.com/de5w8iqms/image/upload/v1704804255/frontend-api/products/cbde9160-aeec-11ee-bb4c-fb12f87154c3.webp",
-          "public_id": "frontend-api/products/cbde9160-aeec-11ee-bb4c-fb12f87154c3"
         }
-      ],
+      ,
       "id": "7f8f"
     },
     {
@@ -231,24 +103,12 @@
       "productPrice": 140,
       "brandId": "49e83560-aec1-11ee-8d72-0986a9297550",
       "isPublish": true,
-      "images": [
+      "images": 
         {
           "url": "http://res.cloudinary.com/de5w8iqms/image/upload/v1704804350/frontend-api/products/048c2680-aeed-11ee-bb4c-fb12f87154c3.webp",
           "public_id": "frontend-api/products/048c2680-aeed-11ee-bb4c-fb12f87154c3"
-        },
-        {
-          "url": "http://res.cloudinary.com/de5w8iqms/image/upload/v1704804350/frontend-api/products/048c9bb0-aeed-11ee-bb4c-fb12f87154c3.webp",
-          "public_id": "frontend-api/products/048c9bb0-aeed-11ee-bb4c-fb12f87154c3"
-        },
-        {
-          "url": "http://res.cloudinary.com/de5w8iqms/image/upload/v1704804350/frontend-api/products/048d10e0-aeed-11ee-bb4c-fb12f87154c3.webp",
-          "public_id": "frontend-api/products/048d10e0-aeed-11ee-bb4c-fb12f87154c3"
-        },
-        {
-          "url": "http://res.cloudinary.com/de5w8iqms/image/upload/v1704804350/frontend-api/products/048dfb40-aeed-11ee-bb4c-fb12f87154c3.webp",
-          "public_id": "frontend-api/products/048dfb40-aeed-11ee-bb4c-fb12f87154c3"
         }
-      ],
+      ,
       "salePrice": 100,
       "id": "f292"
     },
@@ -259,24 +119,12 @@
       "productPrice": 130,
       "brandId": "49e83560-aec1-11ee-8d72-0986a9297550",
       "isPublish": true,
-      "images": [
+      "images": 
         {
           "url": "http://res.cloudinary.com/de5w8iqms/image/upload/v1705925020/frontend-api/products/47d67ae0-b91e-11ee-a443-47c0f4eb5b5b.webp",
           "public_id": "frontend-api/products/47d67ae0-b91e-11ee-a443-47c0f4eb5b5b"
-        },
-        {
-          "url": "http://res.cloudinary.com/de5w8iqms/image/upload/v1705925020/frontend-api/products/47d6c900-b91e-11ee-a443-47c0f4eb5b5b.webp",
-          "public_id": "frontend-api/products/47d6c900-b91e-11ee-a443-47c0f4eb5b5b"
-        },
-        {
-          "url": "http://res.cloudinary.com/de5w8iqms/image/upload/v1705925020/frontend-api/products/47d6f010-b91e-11ee-a443-47c0f4eb5b5b.webp",
-          "public_id": "frontend-api/products/47d6f010-b91e-11ee-a443-47c0f4eb5b5b"
-        },
-        {
-          "url": "http://res.cloudinary.com/de5w8iqms/image/upload/v1705925020/frontend-api/products/47d71720-b91e-11ee-a443-47c0f4eb5b5b.webp",
-          "public_id": "frontend-api/products/47d71720-b91e-11ee-a443-47c0f4eb5b5b"
         }
-      ],
+      ,
       "id": "13dd"
     },
     {
@@ -287,24 +135,12 @@
       "salePrice": 200,
       "brandId": "6102aaf0-aec1-11ee-8d72-0986a9297550",
       "isPublish": true,
-      "images": [
+      "images": 
         {
           "url": "http://res.cloudinary.com/de5w8iqms/image/upload/v1705925092/frontend-api/products/72ff8590-b91e-11ee-a443-47c0f4eb5b5b.webp",
           "public_id": "frontend-api/products/72ff8590-b91e-11ee-a443-47c0f4eb5b5b"
-        },
-        {
-          "url": "http://res.cloudinary.com/de5w8iqms/image/upload/v1705925092/frontend-api/products/72fffac0-b91e-11ee-a443-47c0f4eb5b5b.webp",
-          "public_id": "frontend-api/products/72fffac0-b91e-11ee-a443-47c0f4eb5b5b"
-        },
-        {
-          "url": "http://res.cloudinary.com/de5w8iqms/image/upload/v1705925092/frontend-api/products/730048e0-b91e-11ee-a443-47c0f4eb5b5b.webp",
-          "public_id": "frontend-api/products/730048e0-b91e-11ee-a443-47c0f4eb5b5b"
-        },
-        {
-          "url": "http://res.cloudinary.com/de5w8iqms/image/upload/v1705925092/frontend-api/products/73009700-b91e-11ee-a443-47c0f4eb5b5b.webp",
-          "public_id": "frontend-api/products/73009700-b91e-11ee-a443-47c0f4eb5b5b"
         }
-      ],
+      ,
       "id": "5a73"
     },
     {
@@ -314,24 +150,12 @@
       "productPrice": 50,
       "brandId": "6102aaf0-aec1-11ee-8d72-0986a9297550",
       "isPublish": true,
-      "images": [
+      "images": 
         {
           "url": "http://res.cloudinary.com/de5w8iqms/image/upload/v1705925155/frontend-api/products/98544100-b91e-11ee-a443-47c0f4eb5b5b.webp",
           "public_id": "frontend-api/products/98544100-b91e-11ee-a443-47c0f4eb5b5b"
-        },
-        {
-          "url": "http://res.cloudinary.com/de5w8iqms/image/upload/v1705925155/frontend-api/products/98548f20-b91e-11ee-a443-47c0f4eb5b5b.webp",
-          "public_id": "frontend-api/products/98548f20-b91e-11ee-a443-47c0f4eb5b5b"
-        },
-        {
-          "url": "http://res.cloudinary.com/de5w8iqms/image/upload/v1705925155/frontend-api/products/9854dd40-b91e-11ee-a443-47c0f4eb5b5b.webp",
-          "public_id": "frontend-api/products/9854dd40-b91e-11ee-a443-47c0f4eb5b5b"
-        },
-        {
-          "url": "http://res.cloudinary.com/de5w8iqms/image/upload/v1705925155/frontend-api/products/98552b60-b91e-11ee-a443-47c0f4eb5b5b.webp",
-          "public_id": "frontend-api/products/98552b60-b91e-11ee-a443-47c0f4eb5b5b"
         }
-      ],
+      ,
       "salePrice": null,
       "id": "82c4"
     },
@@ -342,24 +166,12 @@
       "productPrice": 220,
       "brandId": "569dfe20-aec1-11ee-8d72-0986a9297550",
       "isPublish": true,
-      "images": [
+      "images": 
         {
           "public_id": "frontend-api/products/38c56980-b9cd-11ee-ad9c-81dc71d38774",
           "url": "http://res.cloudinary.com/de5w8iqms/image/upload/v1706000157/frontend-api/products/38c56980-b9cd-11ee-ad9c-81dc71d38774.webp"
-        },
-        {
-          "public_id": "frontend-api/products/38c5deb0-b9cd-11ee-ad9c-81dc71d38774",
-          "url": "http://res.cloudinary.com/de5w8iqms/image/upload/v1706000157/frontend-api/products/38c5deb0-b9cd-11ee-ad9c-81dc71d38774.webp"
-        },
-        {
-          "url": "http://res.cloudinary.com/de5w8iqms/image/upload/v1705925338/frontend-api/products/055d2820-b91f-11ee-a443-47c0f4eb5b5b.webp",
-          "public_id": "frontend-api/products/055d2820-b91f-11ee-a443-47c0f4eb5b5b"
-        },
-        {
-          "url": "http://res.cloudinary.com/de5w8iqms/image/upload/v1705925338/frontend-api/products/055d7640-b91f-11ee-a443-47c0f4eb5b5b.webp",
-          "public_id": "frontend-api/products/055d7640-b91f-11ee-a443-47c0f4eb5b5b"
         }
-      ],
+      ,
       "id": "6edb"
     },
     {
@@ -370,24 +182,12 @@
       "salePrice": 10,
       "brandId": "6102aaf0-aec1-11ee-8d72-0986a9297550",
       "isPublish": false,
-      "images": [
+      "images": 
         {
           "url": "http://res.cloudinary.com/de5w8iqms/image/upload/v1705999109/frontend-api/products/c8790210-b9ca-11ee-ad9c-81dc71d38774.webp",
           "public_id": "frontend-api/products/c8790210-b9ca-11ee-ad9c-81dc71d38774"
-        },
-        {
-          "url": "http://res.cloudinary.com/de5w8iqms/image/upload/v1705999109/frontend-api/products/c8795030-b9ca-11ee-ad9c-81dc71d38774.webp",
-          "public_id": "frontend-api/products/c8795030-b9ca-11ee-ad9c-81dc71d38774"
-        },
-        {
-          "url": "http://res.cloudinary.com/de5w8iqms/image/upload/v1705999109/frontend-api/products/c8799e50-b9ca-11ee-ad9c-81dc71d38774.webp",
-          "public_id": "frontend-api/products/c8799e50-b9ca-11ee-ad9c-81dc71d38774"
-        },
-        {
-          "url": "http://res.cloudinary.com/de5w8iqms/image/upload/v1705999109/frontend-api/products/c879ec70-b9ca-11ee-ad9c-81dc71d38774.webp",
-          "public_id": "frontend-api/products/c879ec70-b9ca-11ee-ad9c-81dc71d38774"
         }
-      ],
+      ,
       "id": "1855"
     },
     {
@@ -398,20 +198,12 @@
       "salePrice": 80,
       "brandId": "569dfe20-aec1-11ee-8d72-0986a9297550",
       "isPublish": true,
-      "images": [
+      "images": 
         {
           "url": "http://res.cloudinary.com/de5w8iqms/image/upload/v1708509242/frontend-api/products/245b1330-d09f-11ee-b4c8-7f9dcce1c8b4.webp",
           "public_id": "frontend-api/products/245b1330-d09f-11ee-b4c8-7f9dcce1c8b4"
-        },
-        {
-          "url": "http://res.cloudinary.com/de5w8iqms/image/upload/v1708509242/frontend-api/products/245b8860-d09f-11ee-b4c8-7f9dcce1c8b4.webp",
-          "public_id": "frontend-api/products/245b8860-d09f-11ee-b4c8-7f9dcce1c8b4"
-        },
-        {
-          "url": "http://res.cloudinary.com/de5w8iqms/image/upload/v1708509242/frontend-api/products/245bd680-d09f-11ee-b4c8-7f9dcce1c8b4.webp",
-          "public_id": "frontend-api/products/245bd680-d09f-11ee-b4c8-7f9dcce1c8b4"
         }
-      ],
+      ,
       "id": "aded"
     },
     {
@@ -421,24 +213,12 @@
       "productPrice": 120,
       "brandId": "0cc7b790-e43c-11ee-8682-a528b2933c1e",
       "isPublish": true,
-      "images": [
+      "images": 
         {
           "url": "http://res.cloudinary.com/de5w8iqms/image/upload/v1710665788/frontend-api/products/3db3fa80-e43c-11ee-8682-a528b2933c1e.webp",
           "public_id": "frontend-api/products/3db3fa80-e43c-11ee-8682-a528b2933c1e"
-        },
-        {
-          "url": "http://res.cloudinary.com/de5w8iqms/image/upload/v1710665788/frontend-api/products/3db448a0-e43c-11ee-8682-a528b2933c1e.webp",
-          "public_id": "frontend-api/products/3db448a0-e43c-11ee-8682-a528b2933c1e"
-        },
-        {
-          "url": "http://res.cloudinary.com/de5w8iqms/image/upload/v1710665788/frontend-api/products/3db496c0-e43c-11ee-8682-a528b2933c1e.webp",
-          "public_id": "frontend-api/products/3db496c0-e43c-11ee-8682-a528b2933c1e"
-        },
-        {
-          "url": "http://res.cloudinary.com/de5w8iqms/image/upload/v1710665788/frontend-api/products/3db4bdd0-e43c-11ee-8682-a528b2933c1e.webp",
-          "public_id": "frontend-api/products/3db4bdd0-e43c-11ee-8682-a528b2933c1e"
         }
-      ],
+      ,
       "salePrice": 100,
       "id": "e30a"
     }
@@ -446,19 +226,19 @@
   "user": [
     {
       "email": "test@gmail.com",
-      "password": "1234",
+      "password": "Salam1234",
       "role": "user",
       "id": "687c"
     },
     {
       "email": "test1@gmail.com",
-      "password": "1357",
+      "password": "Salam1234",
       "role": "user",
       "id": "7dc9"
     },
     {
       "email": "admin@gmail.com",
-      "password": "2468",
+      "password": "Admin1234",
       "role": "admin",
       "id": "ec7f"
     }

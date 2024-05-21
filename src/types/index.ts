@@ -2,8 +2,18 @@ interface LoginBody{
     email: string;
     password: string;
 }
-interface User{
+interface User {
     email: string;
     password: string;
-    role: string;
-}
+    role: "admin" | "user";
+    id: string;
+  }
+  interface Product{
+    id: string;
+    title: string;
+    description: string;
+    isPublish : boolean;
+    productPrice: number;
+    salePrice: number;
+    images: { url: string; public_id: string };
+  }
