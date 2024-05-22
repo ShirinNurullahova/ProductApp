@@ -4,6 +4,10 @@ import * as yup from "yup"
 import { login } from "../services/api";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { useAppDispatch, useAppSelector } from "../redux/store";
+import { selectIsAuthorized, setAuthorized } from "../redux/slices/authSlices";
+
+
 const schema = yup
     .object({
         email: yup.string().email().required(),
@@ -11,6 +15,11 @@ const schema = yup
     })
     .required();
 const LoginPage = () => {
+
+    const isAuthorized = useAppSelector(selectIsAuthorized);
+    console.log(isAuthorized)
+    const dispatch = useAppDispatch()
+
     const [message, setMessage] = useState("");
     const [loading, setLoading] = useState(false);
     const navigate = useNavigate()
@@ -32,8 +41,9 @@ const LoginPage = () => {
                 if (user.role !== "admin") {
                     setMessage("Login successful!");
                     navigate('/products')
-                } else{
-                    navigate('/admin') 
+                } else {
+                    dispatch(setAuthorized(true))
+                    navigate('/admin')
                 }
             }
             else {

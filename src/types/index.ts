@@ -9,11 +9,11 @@ interface User {
     id: string;
   }
   interface Product{
-    id: string;
+    id?: string;
     title: string;
     description: string;
     isPublish : boolean;
     productPrice: number;
-    salePrice: number;
+    salePrice?: number;
     images: { url: string; public_id: string };
   }
