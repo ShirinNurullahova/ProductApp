@@ -1,25 +1,17 @@
 import { useForm } from "react-hook-form"
 import { yupResolver } from "@hookform/resolvers/yup"
-import * as yup from "yup"
 import { login } from "../services/api";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { useAppDispatch, useAppSelector } from "../redux/store";
-import { selectIsAuthorized, setAuthorized } from "../redux/slices/authSlices";
+import { useAppDispatch } from "../redux/store";
+import { setAuthorizedUser } from "../redux/slices/authSlices";
+import { loginSchema } from "../validation/validationSchema";
 
 
-const schema = yup
-    .object({
-        email: yup.string().email().required(),
-        password: yup.string().min(8).required(),
-    })
-    .required();
+
+     
 const LoginPage = () => {
-
-    const isAuthorized = useAppSelector(selectIsAuthorized);
-    console.log(isAuthorized)
     const dispatch = useAppDispatch()
-
     const [message, setMessage] = useState("");
     const [loading, setLoading] = useState(false);
     const navigate = useNavigate()
@@ -28,7 +20,7 @@ const LoginPage = () => {
         handleSubmit,
         formState: { errors },
     } = useForm({
-        resolver: yupResolver(schema),
+        resolver: yupResolver(loginSchema),
     })
     const onSubmit = async (data: LoginBody) => {
         try {
@@ -38,11 +30,11 @@ const LoginPage = () => {
             const user = users.find(
                 (user) => user.email === data.email && user.password === data.password);
             if (user) {
+                dispatch(setAuthorizedUser(user))
                 if (user.role !== "admin") {
                     setMessage("Login successful!");
                     navigate('/products')
                 } else {
-                    dispatch(setAuthorized(true))
                     navigate('/admin')
                 }
             }

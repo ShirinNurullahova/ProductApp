@@ -1,16 +1,17 @@
 import { useEffect, useState } from "react";
 import { addProduct, editProduct, getProductById } from "../../services/api";
 import { useParams, useNavigate } from "react-router-dom";
+import { useForm } from "react-hook-form";
+import { yupResolver } from "@hookform/resolvers/yup";
+import {manageProductSchema } from "../../validation/validationSchema";
 
 const ProductManage = () => {
-  const [loading, setLoading] = useState(false);
-  const [formData, setFormData] = useState<Product>({ title: '', description: '', productPrice: 0, images: {url: '', public_id: ''}, isPublish: false });
+  const [formData, setFormData] = useState<Product>({ title: '', description: '', productPrice: 0, images: { url: '', public_id: '' }, isPublish: false });
   const params = useParams<{ productId: string }>();
   const navigate = useNavigate();
 
   useEffect(() => {
     if (params.productId) {
-      setLoading(true);
       getProductById(params.productId)
         .then(res => {
           setFormData({
@@ -18,7 +19,7 @@ const ProductManage = () => {
           });
         })
         .catch(error => console.error('Error fetching product:', error))
-        .finally(() => setLoading(false));
+       
     }
   }, [params.productId]);
 
@@ -28,16 +29,17 @@ const ProductManage = () => {
       ...prevState,
       [id]: type === 'checkbox' ? checked : value
     }));
+    trigger(id);
+
   };
   const handleImageChange = (e) => {
-    const { id, value} = e.target;
+    const { id, value } = e.target;
     setFormData(prevState => ({
       ...prevState,
-      [id]: { url:value}
+      [id]: { url: value }
     }));
   };
   const handleFormSubmit = async (e) => {
-    e.preventDefault();
     try {
       if (params.productId) {
         await editProduct(params.productId, formData);
@@ -50,44 +52,66 @@ const ProductManage = () => {
     }
   };
 
-  if (loading) {
-    return <>Loading...</>;
-  }
+  
+  const {
+    register,
+    handleSubmit,
+    trigger,
+    formState: { errors },
+    setValue
+  } = useForm({
+    resolver: yupResolver(manageProductSchema),
+    defaultValues: formData,
+  });
+  useEffect(() => {
+  
+    Object.keys(formData).forEach((key)  => {
+      const currentKey = key as keyof TodoInfo;
+      setValue(currentKey, formData[currentKey]);
+    });
+  }, [formData, setValue]);
 
+  
   return (
     <div className="flex justify-center items-center flex-col h-screen">
-      <form className="max-w-sm mx-auto" onSubmit={handleFormSubmit}>
+      <form className="max-w-sm mx-auto" onSubmit={handleSubmit(handleFormSubmit)}>
         <div className="mb-5">
           <label htmlFor="title" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Title</label>
           <input
+          {...register("title")}
             type="text"
             id="title"
             className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light"
             value={formData.title}
             onChange={handleInputChange}
-            required
           />
+          {errors.title && <p className="text-red-500">{errors.title.message}</p>}
+
         </div>
         <div className="mb-5">
           <label htmlFor="description" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Description</label>
           <textarea
+          {...register("description")}
             id="description"
             className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light"
             value={formData.description}
             onChange={handleInputChange}
-            required
           />
+          {errors.description && <p className="text-red-500">{errors.description.message}</p>}
+
         </div>
         <div className="mb-5">
           <label htmlFor="price" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Price</label>
           <input
+          {...register("productPrice")}
             type="text"
             id="productPrice"
             className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light"
             value={formData.productPrice}
             onChange={handleInputChange}
-            required
           />
+          {errors.productPrice && <p className="text-red-500">{errors.productPrice.message}</p>}
+
         </div>
         <div className="mb-5">
           <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-white" htmlFor="images">Upload images</label>

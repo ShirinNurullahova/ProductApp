@@ -17,3 +17,5 @@ interface User {
     salePrice?: number;
     images: { url: string; public_id: string };
   }
+
+   type TodoInfo = Omit<Product, "isPublish" | "productPrice" | "salePrice" | "images" | "id">;

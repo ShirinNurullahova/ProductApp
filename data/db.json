@@ -128,7 +128,7 @@
     {
       "_id": "990c4660-b91e-11ee-a443-47c0f4eb5b5b",
       "title": "shirt",
-      "description": "white, shirt",
+      "description": "white, shirt,midi",
       "productPrice": 50,
       "brandId": "6102aaf0-aec1-11ee-8d72-0986a9297550",
       "isPublish": true,
@@ -141,7 +141,7 @@
     },
     {
       "_id": "05ece500-b91f-11ee-a443-47c0f4eb5b5b",
-      "title": "thsirt",
+      "title": "salam",
       "description": "woman shirt",
       "productPrice": 220,
       "brandId": "569dfe20-aec1-11ee-8d72-0986a9297550",

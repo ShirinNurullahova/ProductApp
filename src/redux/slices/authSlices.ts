@@ -1,46 +1,32 @@
-
-import {
-  PayloadAction,
-  createSelector,
-  createSlice
-} from '@reduxjs/toolkit'
-import { RootState } from '../store'
-
-
-
+import { PayloadAction, createSelector, createSlice } from '@reduxjs/toolkit';
+import { RootState } from '../store';
 
 export type Auth = {
-  authorized: boolean;
-}
+  authorizedUser?: User;
+};
 
 const initialState: Auth = {
-  authorized: false
-}
-
-
+  authorizedUser: undefined,
+};
 
 export const authSlice = createSlice({
   name: 'auth',
   initialState,
   reducers: {
-    setAuthorized: (state, action: PayloadAction<boolean>) => {
-      state.authorized = action.payload
-    }
-  }
-})
+    setAuthorizedUser: (state, action: PayloadAction<User>) => {
+      state.authorizedUser = action.payload;
+    },
+    logout: (state) => {
+      state.authorizedUser = undefined;
+    },
+  },
+  
+});
 
-export const {setAuthorized } = authSlice.actions
+export const { setAuthorizedUser, logout } = authSlice.actions;
 
-const selectSelf = (state: RootState) => state.auth
+const selectSelf = (state: RootState) => state.auth;
 
+export const selectAuthorizedUser = createSelector(selectSelf, (auth) => auth.authorizedUser);
 
-
-
-
-export const selectIsAuthorized = createSelector(selectSelf, (auth) => {
-  return auth.authorized
-})
-
-
-
-export const authReducer = authSlice.reducer
+export const authReducer = authSlice.reducer;
