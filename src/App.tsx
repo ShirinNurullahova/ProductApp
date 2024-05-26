@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, useLocation, useNavigate } from "react-router-dom";
 import LoginPage from "./pages/LoginPage";
 import ProductPage from "./pages/ProductPage";
 import ProductDetail from "./pages/ProductDetail";
@@ -8,14 +8,15 @@ import { Provider } from "react-redux";
 import { persistor, store, useAppSelector } from "./redux/store";
 import AuthWrapper from "./components/AuthWrapper";
 import Admin from "./pages/Admin";
-import Navbar from "./components/clients/Navbar"; // Import the Navbar component
+import Navbar from "./components/clients/Navbar"; 
 import { selectAuthorizedUser } from "./redux/slices/authSlices";
+import { useMemo } from "react";
 
 function App() {
   return (
     <Provider store={store}>
       <PersistGate loading={null} persistor={persistor}>
-        <AppContent /> {/* Render the main content inside the provider */}
+        <AppContent /> 
       </PersistGate>
     </Provider>
   );
@@ -24,10 +25,12 @@ function App() {
 function AppContent() {
   const authorizedUser = useAppSelector(selectAuthorizedUser);
   const isAuthenticated = Boolean(authorizedUser);
+  const location = useLocation();
+ const isLoginPage = useMemo(()=> location.pathname === "/", [location.pathname]);
 
   return (
     <div>
-      {isAuthenticated && <Navbar isAuthenticated={isAuthenticated} />} 
+      {isAuthenticated && !isLoginPage && <Navbar isAuthenticated={isAuthenticated} />} 
       <Routes>
         <Route path="/" element={<LoginPage />} />
         <Route path="/products" element={<AuthWrapper><ProductPage /></AuthWrapper>} />

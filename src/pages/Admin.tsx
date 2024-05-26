@@ -1,21 +1,19 @@
-import { useEffect, useState } from "react";
-import { deleteProduct, getProducts } from "../services/api";
+import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import { useAppDispatch, useAppSelector } from "../redux/store";
+import { deleteProductData, getProductsData, selectAllProducts } from "../redux/slices/productSlice";
 
 const Admin = () => {
-    const [products, setProducts] = useState<Product[]>();
     const navigate = useNavigate();
 
+    const products = useAppSelector(selectAllProducts);
+    const dispatch = useAppDispatch();
+
     useEffect(() => {
-        (async () => {
-            try {
-                const res = await getProducts();
-                setProducts(res.data);
-            } catch (error) {
-                console.error('Error fetching products:', error);
-            }
-        })();
-    }, []);
+
+        dispatch(getProductsData());
+
+    }, [dispatch]);
 
     const handleEdit = (id: string) => {
         navigate(`/edit/${id}`);
@@ -26,12 +24,7 @@ const Admin = () => {
     };
 
     const handleDelete = async (id: string) => {
-        try {
-            await deleteProduct(id);
-            setProducts(products?.filter(product => product.id !== id));
-        } catch (error) {
-            console.error("Failed to delete product", error);
-        }
+         dispatch(deleteProductData(id))
     };
 
     return (

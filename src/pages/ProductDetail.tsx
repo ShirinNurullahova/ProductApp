@@ -1,21 +1,20 @@
-import { useEffect, useState } from "react";
-import { getProductById } from "../services/api";
+import { useEffect } from "react";
 import { useParams } from "react-router-dom";
+import { useAppDispatch, useAppSelector } from "../redux/store";
+import { getProductByIdData, getProductIdSelector } from "../redux/slices/productSlice";
+
 const ProductDetail = () => {
-  const [currentProduct, setcurrentProduct] = useState<Product>();
- const params = useParams<{productId: string }>();
- 
+  const currentProduct = useAppSelector(getProductIdSelector);
+  const dispatch = useAppDispatch();
+  const params = useParams<{ productId: string }>();
+
   useEffect(() => {
-    (async () => {
-      try {
-        if(params && params.productId){
-          const res = await getProductById(params.productId);
-          setcurrentProduct(res.data)
-        }
-      } catch (error) {
-      }
-    })();
-  }, []);
+    if (params.productId) {
+      dispatch(getProductByIdData(params.productId));
+    }
+  }, [params.productId, dispatch]);
+  
+ 
   return (
     <div className="min-h-screen flex  bg-gray-100 dark:bg-gray-800 py-8 items-center">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 items-center ">

@@ -6,6 +6,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import {manageProductSchema } from "../../validation/validationSchema";
 
 const ProductManage = () => {
+  
   const [formData, setFormData] = useState<Product>({ title: '', description: '', productPrice: 0, images: { url: '', public_id: '' }, isPublish: false });
   const params = useParams<{ productId: string }>();
   const navigate = useNavigate();
@@ -30,7 +31,6 @@ const ProductManage = () => {
       [id]: type === 'checkbox' ? checked : value
     }));
     trigger(id);
-
   };
   const handleImageChange = (e) => {
     const { id, value } = e.target;

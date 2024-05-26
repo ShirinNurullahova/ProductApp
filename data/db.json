@@ -102,7 +102,7 @@
       "_id": "48a40410-b91e-11ee-a443-47c0f4eb5b5b",
       "title": "Jacket",
       "description": "red, woman jacket",
-      "productPrice": 130,
+      "productPrice": "160",
       "brandId": "49e83560-aec1-11ee-8d72-0986a9297550",
       "isPublish": true,
       "images": {
@@ -138,20 +138,6 @@
       },
       "salePrice": null,
       "id": "82c4"
-    },
-    {
-      "_id": "05ece500-b91f-11ee-a443-47c0f4eb5b5b",
-      "title": "salam",
-      "description": "woman shirt",
-      "productPrice": 220,
-      "brandId": "569dfe20-aec1-11ee-8d72-0986a9297550",
-      "isPublish": true,
-      "images": {
-        "public_id": "frontend-api/products/38c56980-b9cd-11ee-ad9c-81dc71d38774",
-        "url": "http://res.cloudinary.com/de5w8iqms/image/upload/v1706000157/frontend-api/products/38c56980-b9cd-11ee-ad9c-81dc71d38774.webp"
-      },
-      "id": "6edb",
-      "price": 220
     },
     {
       "id": "bf6c",
